@@ -1,0 +1,2494 @@
+This file is a merged representation of a subset of the codebase, containing files not matching ignore patterns, combined into a single document by Repomix.
+The content has been processed where content has been compressed (code blocks are separated by ⋮---- delimiter), security check has been disabled.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching these patterns are excluded: **/src/assets/, **/src/components/shared, **/src/components/template/, **/src/components/ui/, **/src/components/layouts/, **/src/mock/, **/src/test/, **/tasks/, **/.next/, **/.vscode/, **/.windsurf/, **/AI_Docs/, **/node_modules/, **/public/img/landing/demo/, **/public/img/landing/layouts/, **/public/img/landing/tech/, **/public/img/others/, **/scripts/, **/.gitignore, **/.prettierignore, **/.prettierrc, **/.taskmasterconfig, **/.windsurfrules, **/LICENSE, **/next-env.d.ts, **/next.config.mjs, **/pnpm-lock.yaml, **/postcss.config.mjs, **/src/app/(public-pages)/landing/utils/components-icons.config.tsx
+- Files matching default ignore patterns are excluded
+- Content has been compressed - code blocks are separated by ⋮---- delimiter
+- Security check has been disabled - content may contain sensitive information
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+.env-template
+.eslintrc.json
+package.json
+README.md
+src/@types/auth.ts
+src/@types/common.tsx
+src/@types/navigation.ts
+src/@types/next-auth.d.ts
+src/@types/routes.tsx
+src/@types/simplebar-react.d.ts
+src/@types/theme.ts
+src/app/(auth-pages)/confirm/page.tsx
+src/app/(auth-pages)/forgot-password/_components/ForgotPasswordClient.tsx
+src/app/(auth-pages)/forgot-password/page.tsx
+src/app/(auth-pages)/layout.tsx
+src/app/(auth-pages)/reset-password/_components/ResetPasswordClient.tsx
+src/app/(auth-pages)/reset-password/page.tsx
+src/app/(auth-pages)/sign-in/_components/SignInClient.tsx
+src/app/(auth-pages)/sign-in/page.tsx
+src/app/(auth-pages)/sign-up/_components/SignUpClient.tsx
+src/app/(auth-pages)/sign-up/page.tsx
+src/app/(protected-pages)/home/page.tsx
+src/app/(protected-pages)/layout.tsx
+src/app/(protected-pages)/loading.tsx
+src/app/(public-pages)/about/page.tsx
+src/app/(public-pages)/landing/components/AuroraBackground.tsx
+src/app/(public-pages)/landing/components/CardStack.tsx
+src/app/(public-pages)/landing/components/Components.tsx
+src/app/(public-pages)/landing/components/Demos.tsx
+src/app/(public-pages)/landing/components/Features.tsx
+src/app/(public-pages)/landing/components/HeroContent.tsx
+src/app/(public-pages)/landing/components/InfinteMovingCard.tsx
+src/app/(public-pages)/landing/components/Landing.tsx
+src/app/(public-pages)/landing/components/LandingContainer.tsx
+src/app/(public-pages)/landing/components/LandingFooter.tsx
+src/app/(public-pages)/landing/components/NavigationBar.tsx
+src/app/(public-pages)/landing/components/NavList.tsx
+src/app/(public-pages)/landing/components/OtherFeatures.tsx
+src/app/(public-pages)/landing/components/TechStack.tsx
+src/app/(public-pages)/landing/components/TextGenerateEffect.tsx
+src/app/(public-pages)/landing/page.tsx
+src/app/(public-pages)/landing/utils/components-icons.config.tsx
+src/app/(public-pages)/landing/utils/demo-categories-icons.config.tsx
+src/app/(public-pages)/landing/utils/demos-gallery.config.ts
+src/app/api/auth/[...nextauth]/route.ts
+src/app/api/auth/confirm/route.ts
+src/app/api/auth/forgot-password/route.ts
+src/app/api/auth/reset-password/route.ts
+src/app/api/auth/sign-up/route.ts
+src/app/layout.tsx
+src/app/not-found.tsx
+src/app/page.tsx
+src/auth.ts
+src/components/auth/AuthProvider/AuthProvider.tsx
+src/components/auth/AuthProvider/index.ts
+src/components/auth/AuthProvider/SessionContext.tsx
+src/components/auth/ForgotPassword/ForgotPassword.tsx
+src/components/auth/ForgotPassword/ForgotPasswordForm.tsx
+src/components/auth/ForgotPassword/index.ts
+src/components/auth/OtpVerification/index.tsx
+src/components/auth/OtpVerification/OtpVerification.tsx
+src/components/auth/OtpVerification/OtpVerificationForm.tsx
+src/components/auth/ResetPassword/index.ts
+src/components/auth/ResetPassword/ResetPassword.tsx
+src/components/auth/ResetPassword/ResetPasswordForm.tsx
+src/components/auth/SignIn/index.ts
+src/components/auth/SignIn/OauthSignIn.tsx
+src/components/auth/SignIn/SignIn.tsx
+src/components/auth/SignIn/SignInForm.tsx
+src/components/auth/SignUp/index.ts
+src/components/auth/SignUp/SignUp.tsx
+src/components/auth/SignUp/SignUpForm.tsx
+src/configs/app.config.ts
+src/configs/auth.config.ts
+src/configs/chart.config.ts
+src/configs/navigation-icon.config.tsx
+src/configs/navigation.config/index.ts
+src/configs/page-meta.config.ts
+src/configs/preset-theme-schema.config.ts
+src/configs/routes.config/authRoute.ts
+src/configs/routes.config/index.ts
+src/configs/routes.config/otherRoute.ts
+src/configs/routes.config/routes.config.ts
+src/configs/theme.config.ts
+src/constants/app.constant.ts
+src/constants/chart.constant.ts
+src/constants/countries.constant.ts
+src/constants/navigation.constant.ts
+src/constants/roles.constant.ts
+src/constants/route.constant.ts
+src/constants/theme.constant.ts
+src/middleware.ts
+src/server/actions/auth/getServerSession.ts
+src/server/actions/auth/handleOauthSignIn.ts
+src/server/actions/auth/handleSignIn.ts
+src/server/actions/auth/handleSignOut.ts
+src/server/actions/auth/handleSignUp.ts
+src/server/actions/navigation/getNavigation.ts
+src/server/actions/theme.ts
+src/server/actions/user/validateCredential.ts
+src/services/ApiService.ts
+src/services/AuthService.ts
+src/services/AuthServiceResult.ts
+src/services/axios/AxiosBase.ts
+src/services/axios/AxiosRequestIntrceptorConfigCallback.ts
+src/services/axios/AxiosResponseIntrceptorErrorCallback.ts
+src/services/CommonService.ts
+src/utils/acronym.ts
+src/utils/adapter.ts
+src/utils/applyThemeSchema.ts
+src/utils/classNames.ts
+src/utils/fileSizeUnit.ts
+src/utils/hoc/withHeaderItem.tsx
+src/utils/hooks/useAppendQueryParams.ts
+src/utils/hooks/useAuthority.ts
+src/utils/hooks/useCurrentSession.ts
+src/utils/hooks/useDebounce.ts
+src/utils/hooks/useInfiniteScroll.ts
+src/utils/hooks/useInterval .ts
+src/utils/hooks/useLayout.ts
+src/utils/hooks/useLayoutGap.ts
+src/utils/hooks/useMenuActive.ts
+src/utils/hooks/useNavigation.tsx
+src/utils/hooks/useRandomBgColor.ts
+src/utils/hooks/useResponsive.ts
+src/utils/hooks/useScrollTop.ts
+src/utils/hooks/useTheme.ts
+src/utils/hooks/useTimeOutMessage.ts
+src/utils/isBrowser.ts
+src/utils/isLastChild.ts
+src/utils/paginate.ts
+src/utils/queryRoute.ts
+src/utils/reoderArray.ts
+src/utils/reorderDragable.ts
+src/utils/result-utils.ts
+src/utils/sleep.ts
+src/utils/sortBy.ts
+src/utils/tableQueryValidator.ts
+src/utils/wildCardSearch.ts
+tailwind.config.ts
+tsconfig.json
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path=".env-template">
+# environment variables
+SUPABASE_URL=xxxxxxxxx-xxxxxx-xxxxx
+SUPABASE_ANON_KEY=xxxxxxxxx-xxxxxx-xxxxx
+SUPABASE_SERVICE_ROLE_KEY=xxxxxxxxx-xxxxxx-xxxxx
+SUPABASE_JWT_SECRET=xxxxxxxxx-xxxxxx-xxxxx
+NEXTAUTH_SECRET=xxxxxxxxx-xxxxxx-xxxxx
+NEXTAUTH_URL=xxxxxxxxx-xxxxxx-xxxxx
+BREVO_USERNAME=xxxxxxxxx-xxxxxx-xxxxx
+BREVO_PASSWORD=xxxxxxxxx-xxxxxx-xxxxx
+BREVO_API_KEY=xxxxxxxxx-xxxxxx-xxxxx
+EMAIL_FROM=xxxxxxxxx-xxxxxx-xxxxx
+FACEBOOK_AUTH_CLIENT_ID=xxxxxxxxx-xxxxxx-xxxxx
+FACEBOOK_AUTH_CLIENT_SECRET=xxxxxxxxx-xxxxxx-xxxxx
+GOOGLE_AUTH_CLIENT_ID=xxxxxxxxx-xxxxxx-xxxxx
+GOOGLE_AUTH_CLIENT_SECRET=xxxxxxxxx-xxxxxx-xxxxx
+ANTHROPIC_API_KEY=xxxxxxxxx-xxxxxx-xxxxx
+PERPLEXITY_API_KEY=xxxxxxxxx-xxxxxx-xxxxx
+GOOGLE_API_KEY=xxxxxxxxx-xxxxxx-xxxxx
+</file>
+
+<file path=".eslintrc.json">
+{
+  "extends": [
+    "next/core-web-vitals",
+    "next/typescript"
+  ],
+  "rules": {
+    "@typescript-eslint/no-unused-expressions": "off",
+    "@next/next/no-img-element": "off",
+    "react-hooks/rules-of-hooks": "off"
+  }
+}
+</file>
+
+<file path="src/@types/auth.ts">
+export type SignInCredential = {
+    email: string
+    password: string
+}
+⋮----
+export type SignInResponse = {
+    token: string
+    user: {
+        userId: string
+        userName: string
+        authority: string[]
+        avatar: string
+        email: string
+    }
+}
+⋮----
+export type SignUpResponse = {
+    status: string
+    message: string
+}
+⋮----
+export type SignUpCredential = {
+    userName: string
+    email: string
+    password: string
+}
+⋮----
+export type ForgotPassword = {
+    email: string
+}
+⋮----
+export type ResetPassword = {
+    newPassword: string
+    confirmPassword: string
+    token: string
+}
+⋮----
+export type AuthRequestStatus = 'success' | 'failed' | ''
+⋮----
+export type AuthResult = Promise<{
+    status: AuthRequestStatus
+    message: string
+}>
+⋮----
+export type User = {
+    userId?: string | null
+    avatar?: string | null
+    userName?: string | null
+    email?: string | null
+    authority?: string[]
+}
+⋮----
+export type Token = {
+    accessToken: string
+    refereshToken?: string
+}
+⋮----
+export type OauthSignInCallbackPayload = {
+    onSignIn: (tokens: Token, user?: User) => void
+    redirect: () => void
+}
+</file>
+
+<file path="src/@types/common.tsx">
+import type { ReactNode, CSSProperties } from 'react'
+⋮----
+export interface CommonProps {
+    id?: string
+    className?: string
+    children?: ReactNode
+    style?: CSSProperties
+}
+⋮----
+export type TableQueries = {
+    total?: number
+    pageIndex?: string
+    pageSize?: string
+    query?: string
+    order?: 'asc' | 'desc' | ''
+    sortKey?: string | number
+}
+⋮----
+export type PageProps = {
+    params: Promise<{ slug: string }>
+    searchParams: Promise<{ [key: string]: string | string[] | undefined }>
+}
+</file>
+
+<file path="src/@types/next-auth.d.ts">
+import { DefaultSession, DefaultUser } from 'next-auth'
+⋮----
+/**
+ * Authentication providers supported by the application
+ */
+⋮----
+export type AuthProvider = typeof AUTH_PROVIDERS[keyof typeof AUTH_PROVIDERS]
+⋮----
+/**
+ * User roles with their permission levels
+ */
+⋮----
+export type UserRole = typeof USER_ROLES[keyof typeof USER_ROLES]
+⋮----
+/**
+ * Type guard to check if a string is a valid UserRole
+ */
+export function isUserRole(role: string): role is UserRole
+⋮----
+// Extend the built-in NextAuth types
+⋮----
+/**
+     * Extends the default session type with our custom fields
+     */
+interface Session {
+        user: {
+            id: string
+            role?: UserRole
+            firstName?: string
+            supabaseAccessToken?: string
+            // Backward compatibility
+            first_name?: string
+        } & DefaultSession['user']
+    }
+⋮----
+// Backward compatibility
+⋮----
+/**
+     * Extends the default user type with our custom fields
+     */
+interface User extends DefaultUser {
+        role?: UserRole
+        firstName?: string
+        // Backward compatibility
+        first_name?: string
+    }
+⋮----
+// Backward compatibility
+⋮----
+/**
+ * Represents a user profile in the database
+ */
+export interface UserProfile {
+    id: string
+    name?: string
+    email?: string
+    image?: string
+    authProvider?: AuthProvider
+    role?: UserRole
+    firstName?: string
+    lastName?: string
+    phone?: string
+    city?: string
+    info?: string
+    salt?: string
+    createdAt?: string | Date
+    updatedAt?: string | Date
+    
+    // Backward compatibility
+    auth_provider?: AuthProvider
+    first_name?: string
+    last_name?: string
+    created_at?: string | Date
+    updated_at?: string | Date
+}
+⋮----
+// Backward compatibility
+⋮----
+/**
+ * Represents a user pending email verification
+ */
+export interface PendingUser {
+    id: string
+    email: string
+    password: string
+    salt: string
+    name?: string
+    info?: string
+    createdAt: string | Date
+    updatedAt: string | Date
+    
+    // Backward compatibility
+    created_at?: string | Date
+    updated_at?: string | Date
+}
+⋮----
+// Backward compatibility
+</file>
+
+<file path="src/@types/routes.tsx">
+import { LayoutType } from './theme'
+import type { LazyExoticComponent, ReactNode, JSX } from 'react'
+⋮----
+export type PageHeaderProps = {
+    title?: string | ReactNode | LazyExoticComponent<() => JSX.Element>
+    description?: string | ReactNode
+    contained?: boolean
+    extraHeader?: string | ReactNode | LazyExoticComponent<() => JSX.Element>
+}
+⋮----
+export interface Meta {
+    pageContainerType?: 'default' | 'gutterless' | 'contained'
+    pageBackgroundType?: 'default' | 'plain'
+    header?: PageHeaderProps
+    footer?: boolean
+    layout?: LayoutType
+}
+⋮----
+export type Route = {
+    key: string
+    authority: string[]
+    dynamicRoute?: boolean
+    meta?: Meta
+}
+⋮----
+export type Routes = { [key: string]: Route }
+</file>
+
+<file path="src/@types/simplebar-react.d.ts">
+export interface Props extends React.HTMLAttributes<HTMLDivElement> {
+        children?: React.ReactNode
+        className?: string
+        style?: React.CSSProperties
+        autoHide?: boolean
+        forceVisible?: boolean | 'x' | 'y'
+        scrollbarMinSize?: number
+        scrollbarMaxSize?: number
+    }
+</file>
+
+<file path="src/app/(auth-pages)/confirm/page.tsx">
+import { useEffect, useState } from 'react'
+import { useRouter, useSearchParams } from 'next/navigation'
+import { LuLoader, LuLoaderCircle, LuCircleX, LuMail } from 'react-icons/lu'
+import { Button } from '@/components/ui/Button'
+⋮----
+// eslint-disable-next-line
+⋮----
+export default function ConfirmPage()
+⋮----
+// Test link handling (frontend only)
+⋮----
+// Real confirmation logic
+⋮----
+const handleResend = async () =>
+⋮----
+// eslint-disable-next-line
+</file>
+
+<file path="src/app/(auth-pages)/forgot-password/_components/ForgotPasswordClient.tsx">
+import { apiForgotPassword } from '@/services/AuthService'
+import ForgotPassword from '@/components/auth/ForgotPassword'
+import { toast } from '@/components/ui/toast'
+import Notification from '@/components/ui/Notification'
+import type { OnForgotPasswordSubmitPayload } from '@/components/auth/ForgotPassword'
+⋮----
+const ForgotPasswordClient = () =>
+⋮----
+const handleForgotPasswordSubmit = async ({
+        values,
+        setSubmitting,
+        setMessage,
+        setEmailSent,
+}: OnForgotPasswordSubmitPayload) =>
+</file>
+
+<file path="src/app/(auth-pages)/forgot-password/page.tsx">
+import ForgotPasswordClient from './_components/ForgotPasswordClient'
+⋮----
+const Page = () =>
+</file>
+
+<file path="src/app/(auth-pages)/layout.tsx">
+import { ReactNode } from 'react'
+import Side from '@/components/layouts/AuthLayout/Side'
+// import Split from '@/components/layouts/AuthLayout/Split'
+// import Simple from '@/components/layouts/AuthLayout/Simple'
+⋮----
+const Layout = (
+</file>
+
+<file path="src/app/(auth-pages)/reset-password/_components/ResetPasswordClient.tsx">
+import ResetPassword from '@/components/auth/ResetPassword'
+import { apiResetPassword } from '@/services/AuthService'
+import { useSearchParams } from 'next/navigation'
+import type { OnResetPasswordSubmitPayload } from '@/components/auth/ResetPassword'
+⋮----
+const ResetPasswordClient = () =>
+⋮----
+/** Token or Verification Code ensures the request is tied to the correct user */
+⋮----
+const handleResetPassword = async (
+        payload: OnResetPasswordSubmitPayload,
+) =>
+</file>
+
+<file path="src/app/(auth-pages)/reset-password/page.tsx">
+import ResetPasswordClient from './_components/ResetPasswordClient'
+⋮----
+const Page = () =>
+</file>
+
+<file path="src/app/(auth-pages)/sign-in/_components/SignInClient.tsx">
+import SignIn from '@/components/auth/SignIn'
+import { onSignInWithCredentials } from '@/server/actions/auth/handleSignIn'
+import handleOauthSignIn from '@/server/actions/auth/handleOauthSignIn'
+import { REDIRECT_URL_KEY } from '@/constants/app.constant'
+import { useSearchParams } from 'next/navigation'
+import type {
+    OnSignInPayload,
+    OnOauthSignInPayload,
+} from '@/components/auth/SignIn'
+⋮----
+const SignInClient = () =>
+⋮----
+const handleSignIn = ({
+        values,
+        setSubmitting,
+        setMessage,
+}: OnSignInPayload) =>
+⋮----
+const handleOAuthSignIn = async (
+</file>
+
+<file path="src/app/(auth-pages)/sign-in/page.tsx">
+import SignInClient from './_components/SignInClient'
+⋮----
+const Page = () =>
+</file>
+
+<file path="src/app/(auth-pages)/sign-up/page.tsx">
+import SignUpClient from './_components/SignUpClient'
+⋮----
+const Page = () =>
+</file>
+
+<file path="src/app/(protected-pages)/home/page.tsx">
+const Page = () =>
+</file>
+
+<file path="src/app/(protected-pages)/layout.tsx">
+import React from 'react'
+import PostLoginLayout from '@/components/layouts/PostLoginLayout'
+import { ReactNode } from 'react'
+⋮----
+const Layout = async (
+</file>
+
+<file path="src/app/(protected-pages)/loading.tsx">
+import Loading from '@/components/shared/Loading'
+⋮----
+const loading = () =>
+</file>
+
+<file path="src/app/(public-pages)/landing/components/AuroraBackground.tsx">
+import classNames from '@/utils/classNames'
+import type { ReactNode } from 'react'
+⋮----
+interface AuroraBackgroundProps extends React.HTMLProps<HTMLDivElement> {
+    children: ReactNode
+    showRadialGradient?: boolean
+    auroraClassName?: string
+}
+⋮----
+className=
+</file>
+
+<file path="src/app/(public-pages)/landing/components/CardStack.tsx">
+import { useState } from "react";
+import classNames from "@/utils/classNames";
+import { motion } from "framer-motion";
+⋮----
+type Card = {
+  id: number;
+  name: string;
+  content: React.ReactNode;
+};
+⋮----
+const flip = () =>
+</file>
+
+<file path="src/app/(public-pages)/landing/components/Components.tsx">
+import Container from './LandingContainer'
+import { motion } from 'framer-motion'
+import Link from 'next/link'
+import componentsIcons from '../utils/components-icons.config'
+⋮----
+const renderComponentIcon = (item: {
+        id: string
+        name: string
+        link: string
+}) =>
+</file>
+
+<file path="src/app/(public-pages)/landing/components/Demos.tsx">
+import { useState } from 'react'
+import Button from '@/components/ui/Button'
+import Container from './LandingContainer'
+import demoCategoriesIcons from '../utils/demo-categories-icons.config'
+import {
+    allDemos,
+    projectDemos,
+    ecommerceDemos,
+    aiDemos,
+    appsDemos,
+    marketingDemos,
+    helpCenterDemos,
+    accountDemos,
+    authDemos,
+} from '../utils//demos-gallery.config'
+import classNames from '@/utils/classNames'
+import { motion, AnimatePresence } from 'framer-motion'
+import { useRouter } from 'next/navigation'
+import Link from 'next/link'
+import type { Mode } from '@/@types/theme'
+⋮----
+type DemoProps = {
+    mode: Mode
+}
+⋮----
+const [selectedTab, setSelectedTab] = useState('all')
+⋮----
+const router = useRouter()
+</file>
+
+<file path="src/app/(public-pages)/landing/components/Features.tsx">
+import Switcher from '@/components/ui/Switcher'
+import Container from './LandingContainer'
+import CardStack from './CardStack'
+import InfiniteMovingCards from './InfinteMovingCard'
+import presetThemeSchemaConfig from '@/configs/preset-theme-schema.config'
+import classNames from '@/utils/classNames'
+import componentsIcons from '../utils/components-icons.config'
+import { motion } from 'framer-motion'
+import Image from 'next/image'
+import { TbCheck } from 'react-icons/tb'
+import type { HTMLMotionProps } from 'framer-motion'
+import type { Mode } from '@/@types/theme'
+⋮----
+type CardProps = HTMLMotionProps<'div'>
+⋮----
+type FeaturesProps = {
+    mode: Mode
+    onModeChange: (value: boolean) => void
+    schema: string
+    setSchema: (value: string) => void
+}
+⋮----
+const getCardBgStyles = (mode: Mode = 'light') =>
+⋮----
+href={`https://ecme-next.themenate.net/ui-components/${item.link}`}
+⋮----
+className=
+</file>
+
+<file path="src/app/(public-pages)/landing/components/HeroContent.tsx">
+import Button from '@/components/ui/Button'
+import { motion } from 'framer-motion'
+import TextGenerateEffect from './TextGenerateEffect'
+import { MODE_DARK, MODE_LIGHT } from '@/constants/theme.constant'
+import Image from 'next/image'
+import { useRouter } from 'next/navigation'
+import type { Mode } from '@/@types/theme'
+⋮----
+const handlePreview = () =>
+⋮----
+const handleGetTemplate = () =>
+</file>
+
+<file path="src/app/(public-pages)/landing/components/InfinteMovingCard.tsx">
+import classNames from '@/utils/classNames'
+import React, { useEffect, useState, type ReactNode } from 'react'
+⋮----
+// eslint-disable-next-line react-hooks/exhaustive-deps
+⋮----
+function addAnimation()
+const getDirection = () =>
+const getSpeed = () =>
+⋮----
+className=
+⋮----
+</file>
+
+<file path="src/app/(public-pages)/landing/components/Landing.tsx">
+import HeroContent from './HeroContent'
+import NavigationBar from './NavigationBar'
+import Features from './Features'
+import Demos from './Demos'
+import TechStack from './TechStack'
+import OtherFeatures from './OtherFeatures'
+import Components from './Components'
+import LandingFooter from './LandingFooter'
+import useTheme from '@/utils/hooks/useTheme'
+import { MODE_DARK, MODE_LIGHT } from '@/constants/theme.constant'
+⋮----
+const toggleMode = () =>
+</file>
+
+<file path="src/app/(public-pages)/landing/components/LandingContainer.tsx">
+import { forwardRef, ElementType } from 'react'
+import classNames from '@/utils/classNames'
+import { CommonProps } from '@/@types/common'
+⋮----
+interface ContainerProps extends CommonProps {
+    asElement?: ElementType
+}
+⋮----
+className=
+</file>
+
+<file path="src/app/(public-pages)/landing/components/LandingFooter.tsx">
+import Container from './LandingContainer'
+import Button from '@/components/ui/Button'
+import AuroraBackground from './AuroraBackground'
+import { motion } from 'framer-motion'
+import { MODE_DARK, MODE_LIGHT } from '@/constants/theme.constant'
+import { useRouter } from 'next/navigation'
+import Link from 'next/link'
+import Image from 'next/image'
+import type { Mode } from '@/@types/theme'
+⋮----
+const handlePreview = () =>
+</file>
+
+<file path="src/app/(public-pages)/landing/components/NavigationBar.tsx">
+import { useState } from 'react'
+import { useRouter } from 'next/navigation'
+import Link from 'next/link'
+import Image from 'next/image'
+import { TbMenu2 } from 'react-icons/tb'
+import { IoLogIn, IoSunnyOutline } from 'react-icons/io5'
+import { MdModeNight } from 'react-icons/md'
+import NavList from './NavList'
+import Drawer from '@/components/ui/Drawer'
+import { Button } from '@/components/ui/Button'
+import classNames from '@/utils/classNames'
+import useScrollTop from '@/utils/hooks/useScrollTop'
+import type { Mode } from '@/@types/theme'
+⋮----
+type NavigationProps = {
+    toggleMode: () => void
+    mode: Mode
+}
+⋮----
+const handleLoginRedirect = async () =>
+⋮----
+{/* Mobile Menu Button */}
+⋮----
+{/* Drawer for Navigation */}
+⋮----
+{/* Logo */}
+⋮----
+{/* Desktop Navigation */}
+⋮----
+{/* Theme Toggle & Login Button */}
+⋮----
+{/* Login Button */}
+</file>
+
+<file path="src/app/(public-pages)/landing/components/NavList.tsx">
+import { useState } from 'react'
+import { motion } from 'framer-motion'
+// eslint-disable-next-line import/named
+import { Link } from 'react-scroll'
+import NextLink from 'next/link'
+import classNames from '@/utils/classNames'
+⋮----
+type AnchorTab = {
+    title: string
+    value: string
+    to: string
+}
+⋮----
+type LinkTab = {
+    title: string
+    value: string
+    href: string
+}
+⋮----
+type Tab = LinkTab | AnchorTab
+⋮----
+const moveSelectedTabToTop = (idx: number) =>
+⋮----
+className=
+</file>
+
+<file path="src/app/(public-pages)/landing/components/TechStack.tsx">
+import { useState } from 'react'
+import Container from './LandingContainer'
+import { motion, AnimatePresence } from 'framer-motion'
+</file>
+
+<file path="src/app/(public-pages)/landing/components/TextGenerateEffect.tsx">
+import { useEffect } from 'react'
+import { motion, stagger, useAnimate } from 'framer-motion'
+import classNames from '@/utils/classNames'
+⋮----
+// eslint-disable-next-line react-hooks/exhaustive-deps
+</file>
+
+<file path="src/app/(public-pages)/landing/page.tsx">
+import Landing from "./components/Landing"
+⋮----
+const Page = () =>
+</file>
+
+<file path="src/app/(public-pages)/landing/utils/components-icons.config.tsx">
+import { ReactNode } from 'react'
+import {
+    PiPuzzlePieceDuotone,
+    PiChatDotsDuotone,
+    PiCalendarDuotone,
+    PiUserCircleDuotone,
+    PiChatCircleDuotone,
+    PiImagesDuotone,
+    PiCalendarCheckDuotone,
+    PiWarningDuotone,
+    PiCursorClickDuotone,
+    PiGridFourDuotone,
+    PiTextAaDuotone,
+    PiSidebarDuotone,
+    PiSpinnerGapDuotone,
+    PiSkullDuotone ,
+    PiSpinnerBallDuotone,
+    PiBreadDuotone,
+    PiMedalDuotone,
+    PiCardsDuotone,
+    PiTableDuotone,
+    PiTagDuotone,
+    PiClockCountdownDuotone,
+    PiChatCenteredDuotone,
+    PiCheckSquareDuotone,
+    PiClipboardTextDuotone,
+    PiRowsDuotone,
+    PiRowsPlusBottomDuotone,
+    PiRadioButtonDuotone,
+    PiChartDonutDuotone,
+    PiListChecksBold,
+    PiToggleRightDuotone,
+    PiClockAfternoonDuotone,
+    PiUploadDuotone,
+    PiCaretCircleDownDuotone,
+    PiListDuotone,
+    PiCodeSimpleDuotone,
+    PiFootprintsDuotone,
+    PiBrowsersDuotone,
+    PiChartLineUpDuotone,
+    PiMapTrifoldDuotone,
+    
+} from 'react-icons/pi'
+⋮----
+export type ComponentIcons = Record<string, ReactNode>
+</file>
+
+<file path="src/app/(public-pages)/landing/utils/demo-categories-icons.config.tsx">
+import {
+    PiSquaresFourDuotone,
+    PiProjectorScreenChartDuotone,
+    PiUserCircleDuotone,
+    PiSparkleDuotone,
+    PiQuestionDuotone,
+    PiShieldCheckDuotone,
+    PiShoppingCartSimpleDuotone,
+    PiMegaphoneDuotone,
+    PiAppWindowDuotone 
+} from 'react-icons/pi'
+⋮----
+export type ComponentIcons = Record<string, React.ReactNode>
+</file>
+
+<file path="src/app/(public-pages)/landing/utils/demos-gallery.config.ts">
+
+</file>
+
+<file path="src/app/api/auth/[...nextauth]/route.ts">
+import { handlers } from '@/auth'
+</file>
+
+<file path="src/app/api/auth/confirm/route.ts">
+import { NextRequest, NextResponse } from 'next/server'
+import { verifyToken, markEmailAsVerified } from '@/lib/db'
+⋮----
+/**
+ * API endpoint for email verification
+ * 
+ * This endpoint verifies a token sent in the confirmation email
+ * and marks the user's email as verified if the token is valid
+ */
+export async function POST(req: NextRequest)
+⋮----
+// Verify the token
+⋮----
+// Mark the user's email as verified
+⋮----
+// Delete the token to prevent reuse
+⋮----
+// Helper function to delete the token
+async function deleteToken(token: string)
+⋮----
+// We don't fail the verification if token deletion fails
+</file>
+
+<file path="src/app/api/auth/forgot-password/route.ts">
+import { NextResponse } from 'next/server'
+⋮----
+export async function POST()
+⋮----
+/** implement forgot password logic here */
+</file>
+
+<file path="src/app/api/auth/reset-password/route.ts">
+import { NextResponse } from 'next/server'
+⋮----
+export async function POST()
+⋮----
+/** implement reset password logic here */
+</file>
+
+<file path="src/app/api/auth/sign-up/route.ts">
+import { NextResponse } from 'next/server'
+⋮----
+export async function POST()
+⋮----
+/** implement signup user logic here */
+</file>
+
+<file path="src/app/not-found.tsx">
+import Link from 'next/link'
+import Container from '@/components/shared/Container'
+import NotFound404 from '@/assets/svg/NotFound404'
+import appConfig from '@/configs/app.config'
+</file>
+
+<file path="src/auth.ts">
+import NextAuth from 'next-auth'
+import appConfig from '@/configs/app.config'
+import authConfig from '@/configs/auth.config'
+</file>
+
+<file path="src/components/auth/AuthProvider/AuthProvider.tsx">
+import { SessionProvider as NextAuthSessionProvider } from 'next-auth/react'
+import SessionContext from './SessionContext'
+import type { Session as NextAuthSession } from 'next-auth'
+⋮----
+type Session = NextAuthSession | null
+⋮----
+type AuthProviderProps = {
+    session: Session | null
+    children: React.ReactNode
+}
+⋮----
+const AuthProvider = (props: AuthProviderProps) =>
+⋮----
+/** since the next auth useSession hook was triggering mutliple re-renders, hence we are using the our custom session provider and we still included the next auth session provider, incase we need to use any client hooks from next auth */
+</file>
+
+<file path="src/components/auth/AuthProvider/index.ts">
+import AuthProvider from './AuthProvider'
+</file>
+
+<file path="src/components/auth/AuthProvider/SessionContext.tsx">
+import { createContext } from 'react'
+import type { User } from 'next-auth'
+⋮----
+type Session = {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    user?: User & Record<string, any>
+    expires: string
+}
+⋮----
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+</file>
+
+<file path="src/components/auth/ForgotPassword/ForgotPassword.tsx">
+import { useState } from 'react'
+import Alert from '@/components/ui/Alert'
+import Button from '@/components/ui/Button'
+import ActionLink from '@/components/shared/ActionLink'
+import ForgotPasswordForm from './ForgotPasswordForm'
+import useTimeOutMessage from '@/utils/hooks/useTimeOutMessage'
+import { useRouter } from 'next/navigation'
+import type { OnForgotPasswordSubmit } from './ForgotPasswordForm'
+⋮----
+type ForgotPasswordProps = {
+    signInUrl?: string
+    onForgotPasswordSubmit?: OnForgotPasswordSubmit
+}
+⋮----
+const handleContinue = () =>
+</file>
+
+<file path="src/components/auth/ForgotPassword/ForgotPasswordForm.tsx">
+import { useState } from 'react'
+import Input from '@/components/ui/Input'
+import Button from '@/components/ui/Button'
+import { FormItem, Form } from '@/components/ui/Form'
+import { useForm, Controller } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { z } from 'zod'
+import type { ZodType } from 'zod'
+import type { CommonProps } from '@/@types/common'
+⋮----
+type ForgotPasswordFormSchema = {
+    email: string
+}
+⋮----
+export type OnForgotPasswordSubmitPayload = {
+    values: ForgotPasswordFormSchema
+    setSubmitting: (isSubmitting: boolean) => void
+    setMessage: (message: string) => void
+    setEmailSent: (complete: boolean) => void
+}
+⋮----
+export type OnForgotPasswordSubmit = (
+    payload: OnForgotPasswordSubmitPayload,
+) => void
+⋮----
+interface ForgotPasswordFormProps extends CommonProps {
+    onForgotPasswordSubmit?: OnForgotPasswordSubmit
+    emailSent: boolean
+    setEmailSent: (compplete: boolean) => void
+    setMessage: (message: string) => void
+}
+⋮----
+const onForgotPassword = async (values: ForgotPasswordFormSchema) =>
+⋮----
+<Form onSubmit=
+</file>
+
+<file path="src/components/auth/ForgotPassword/index.ts">
+import ForgotPassword from './ForgotPassword'
+</file>
+
+<file path="src/components/auth/OtpVerification/index.tsx">
+import OtpVerification from './OtpVerification'
+</file>
+
+<file path="src/components/auth/OtpVerification/OtpVerification.tsx">
+import Alert from '@/components/ui/Alert'
+import OtpVerificationForm from './OtpVerificationForm'
+import sleep from '@/utils/sleep'
+import useTimeOutMessage from '@/utils/hooks/useTimeOutMessage'
+⋮----
+const handleResendOtp = async () =>
+⋮----
+/** simulate api call with sleep */
+</file>
+
+<file path="src/components/auth/OtpVerification/OtpVerificationForm.tsx">
+import { useState } from 'react'
+import Button from '@/components/ui/Button'
+import { FormItem, Form } from '@/components/ui/Form'
+import OtpInput from '@/components/shared/OtpInput'
+import sleep from '@/utils/sleep'
+import { useForm, Controller } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { z } from 'zod'
+import type { ZodType } from 'zod'
+import type { CommonProps } from '@/@types/common'
+⋮----
+interface OtpVerificationFormProps extends CommonProps {
+    setOtpVerified?: (message: string) => void
+    setMessage?: (message: string) => void
+}
+⋮----
+type ForgotPasswordFormSchema = {
+    otp: string
+}
+⋮----
+const onOtpSend = async (values: ForgotPasswordFormSchema) =>
+⋮----
+/** simulate api call with sleep */
+⋮----
+<Form onSubmit=
+</file>
+
+<file path="src/components/auth/ResetPassword/index.ts">
+import ResetPassword from './ResetPassword'
+</file>
+
+<file path="src/components/auth/ResetPassword/ResetPassword.tsx">
+import { useState } from 'react'
+import Alert from '@/components/ui/Alert'
+import Button from '@/components/ui/Button'
+import ActionLink from '@/components/shared/ActionLink'
+import ResetPasswordForm from './ResetPasswordForm'
+import useTimeOutMessage from '@/utils/hooks/useTimeOutMessage'
+import { useRouter } from 'next/navigation'
+import type { OnResetPasswordSubmit } from './ResetPasswordForm'
+⋮----
+type ResetPasswordProps = {
+    signInUrl?: string
+    onResetPasswordSubmit?: OnResetPasswordSubmit
+}
+⋮----
+const handleContinue = () =>
+</file>
+
+<file path="src/components/auth/ResetPassword/ResetPasswordForm.tsx">
+import { useState } from 'react'
+import Button from '@/components/ui/Button'
+import { FormItem, Form } from '@/components/ui/Form'
+import PasswordInput from '@/components/shared/PasswordInput'
+import { useForm, Controller } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { z } from 'zod'
+import type { ZodType } from 'zod'
+import type { CommonProps } from '@/@types/common'
+⋮----
+type ResetPasswordFormSchema = {
+    newPassword: string
+    confirmPassword: string
+}
+⋮----
+export type OnResetPasswordSubmitPayload = {
+    values: ResetPasswordFormSchema
+    setSubmitting: (isSubmitting: boolean) => void
+    setMessage: (message: string) => void
+    setResetComplete?: (complete: boolean) => void
+}
+⋮----
+export type OnResetPasswordSubmit = (
+    payload: OnResetPasswordSubmitPayload,
+) => void
+⋮----
+interface ResetPasswordFormProps extends CommonProps {
+    onResetPasswordSubmit?: OnResetPasswordSubmit
+    resetComplete: boolean
+    setResetComplete: (complete: boolean) => void
+    setMessage: (message: string) => void
+}
+⋮----
+const handleResetPassword = async (values: ResetPasswordFormSchema) =>
+⋮----
+<Form onSubmit=
+</file>
+
+<file path="src/components/auth/SignIn/index.ts">
+import SignIn from './SignIn'
+</file>
+
+<file path="src/components/auth/SignIn/SignIn.tsx">
+import Logo from '@/components/template/Logo'
+import Alert from '@/components/ui/Alert'
+import SignInForm from './SignInForm'
+import OauthSignIn from './OauthSignIn'
+import ActionLink from '@/components/shared/ActionLink'
+import useTimeOutMessage from '@/utils/hooks/useTimeOutMessage'
+import useTheme from '@/utils/hooks/useTheme'
+import type { OnSignIn } from './SignInForm'
+import type { OnOauthSignIn } from './OauthSignIn'
+⋮----
+type SignInProps = {
+    signUpUrl?: string
+    forgetPasswordUrl?: string
+    onSignIn?: OnSignIn
+    onOauthSignIn?: OnOauthSignIn
+}
+</file>
+
+<file path="src/components/auth/SignUp/index.ts">
+import SignUp from './SignUp'
+</file>
+
+<file path="src/components/auth/SignUp/SignUp.tsx">
+import Logo from '@/components/template/Logo'
+import Alert from '@/components/ui/Alert'
+import SignUpForm from './SignUpForm'
+import ActionLink from '@/components/shared/ActionLink'
+import useTimeOutMessage from '@/utils/hooks/useTimeOutMessage'
+import useTheme from '@/utils/hooks/useTheme'
+import type { OnSignUp } from './SignUpForm'
+⋮----
+type SignUpProps = {
+    signInUrl?: string
+    onSignUp?: OnSignUp
+}
+</file>
+
+<file path="src/components/auth/SignUp/SignUpForm.tsx">
+import { useState } from 'react'
+import Input from '@/components/ui/Input'
+import Button from '@/components/ui/Button'
+import { FormItem, Form } from '@/components/ui/Form'
+import { useForm, Controller } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { z } from 'zod'
+import type { ZodType } from 'zod'
+import type { CommonProps } from '@/@types/common'
+⋮----
+type SignUpFormSchema = {
+    userName: string
+    password: string
+    email: string
+    confirmPassword: string
+}
+⋮----
+export type OnSignUpPayload = {
+    values: SignUpFormSchema
+    setSubmitting: (isSubmitting: boolean) => void
+    setMessage: (message: string) => void
+}
+⋮----
+export type OnSignUp = (payload: OnSignUpPayload) => void
+⋮----
+interface SignUpFormProps extends CommonProps {
+    setMessage: (message: string) => void
+    onSignUp?: OnSignUp
+}
+⋮----
+const handleSignUp = async (values: SignUpFormSchema) =>
+⋮----
+<Form onSubmit=
+</file>
+
+<file path="src/configs/auth.config.ts">
+import type { NextAuthConfig } from 'next-auth'
+import validateCredential from '../server/actions/user/validateCredential'
+import Credentials from 'next-auth/providers/credentials'
+import Github from 'next-auth/providers/github'
+import Google from 'next-auth/providers/google'
+⋮----
+import type { SignInCredential } from '@/@types/auth'
+⋮----
+async authorize(credentials)
+⋮----
+/** validate credentials from backend here */
+⋮----
+async session(payload)
+⋮----
+/** apply extra user attributes here, for example, we add 'authority' & 'id' in this section */
+</file>
+
+<file path="src/configs/chart.config.ts">
+import { COLORS } from '@/constants/chart.constant'
+import type { ApexOptions } from 'apexcharts'
+</file>
+
+<file path="src/configs/navigation-icon.config.tsx">
+import {
+    PiHouseLineDuotone,
+    PiArrowsInDuotone,
+    PiBookOpenUserDuotone,
+    PiBookBookmarkDuotone,
+    PiAcornDuotone,
+    PiBagSimpleDuotone,
+} from 'react-icons/pi'
+import type { JSX } from 'react'
+⋮----
+export type NavigationIcons = Record<string, JSX.Element>
+</file>
+
+<file path="src/configs/navigation.config/index.ts">
+import {
+    NAV_ITEM_TYPE_TITLE,
+    NAV_ITEM_TYPE_ITEM,
+    NAV_ITEM_TYPE_COLLAPSE,
+} from '@/constants/navigation.constant'
+⋮----
+import type { NavigationTree } from '@/@types/navigation'
+⋮----
+/** Example purpose only, please remove */
+</file>
+
+<file path="src/configs/page-meta.config.ts">
+import { Metadata } from 'next'
+</file>
+
+<file path="src/configs/preset-theme-schema.config.ts">
+export type Variables =
+    | 'primary'
+    | 'primaryDeep'
+    | 'primaryMild'
+    | 'primarySubtle'
+    | 'neutral'
+⋮----
+export type ThemeVariables = Record<'light' | 'dark', Record<Variables, string>>
+</file>
+
+<file path="src/configs/routes.config/index.ts">
+
+</file>
+
+<file path="src/configs/routes.config/otherRoute.ts">
+import type { Routes } from '@/@types/routes'
+</file>
+
+<file path="src/configs/theme.config.ts">
+import { THEME_ENUM } from '@/constants/theme.constant'
+import type { Theme } from '@/@types/theme'
+⋮----
+/**
+ * Since some configurations need to be match with specific themes,
+ * we recommend to use the configuration that generated from demo.
+ */
+</file>
+
+<file path="src/constants/chart.constant.ts">
+
+</file>
+
+<file path="src/constants/countries.constant.ts">
+
+</file>
+
+<file path="src/constants/navigation.constant.ts">
+
+</file>
+
+<file path="src/constants/roles.constant.ts">
+
+</file>
+
+<file path="src/constants/route.constant.ts">
+
+</file>
+
+<file path="src/server/actions/auth/getServerSession.ts">
+import { auth } from '@/auth'
+⋮----
+export default async function getServerSession()
+</file>
+
+<file path="src/server/actions/auth/handleOauthSignIn.ts">
+import { signIn } from '@/auth'
+import appConfig from '@/configs/app.config'
+⋮----
+const handleOauthSignIn = async (
+    signInMethod: string,
+    callbackUrl?: string,
+) =>
+</file>
+
+<file path="src/server/actions/auth/handleSignIn.ts">
+import { signIn } from '@/auth'
+import appConfig from '@/configs/app.config'
+import { AuthError } from 'next-auth'
+import type { SignInCredential } from '@/@types/auth'
+⋮----
+export const onSignInWithCredentials = async (
+    { email, password }: SignInCredential,
+    callbackUrl?: string,
+) =>
+⋮----
+/** Customize error message based on AuthError */
+</file>
+
+<file path="src/server/actions/auth/handleSignOut.ts">
+import { signOut } from '@/auth'
+import appConfig from '@/configs/app.config'
+⋮----
+const handleSignOut = async () =>
+</file>
+
+<file path="src/server/actions/auth/handleSignUp.ts">
+import type { SignUpCredential } from '@/@types/auth'
+⋮----
+export const onSignUpWithCredentials = async ({
+    email,
+    userName,
+}: SignUpCredential) =>
+⋮----
+/** Pretend create user */
+</file>
+
+<file path="src/server/actions/navigation/getNavigation.ts">
+import navigationConfig from '@/configs/navigation.config'
+⋮----
+export async function getNavigation()
+</file>
+
+<file path="src/server/actions/theme.ts">
+import { cookies } from 'next/headers'
+import { themeConfig } from '@/configs/theme.config'
+import { COOKIES_KEY } from '@/constants/app.constant'
+import type { Theme } from '@/@types/theme'
+⋮----
+export async function getTheme(): Promise<Theme>
+⋮----
+export async function setTheme(theme: string)
+</file>
+
+<file path="src/server/actions/user/validateCredential.ts">
+import type { SignInCredential } from '@/@types/auth'
+import { signInUserData } from '@/mock/data/authData'
+import sleep from '@/utils/sleep'
+⋮----
+const validateCredential = async (values: SignInCredential) =>
+⋮----
+/** Implement your validation here, as this is just a mock */
+</file>
+
+<file path="src/services/ApiService.ts">
+import AxiosBase from './axios/AxiosBase'
+import type { AxiosRequestConfig, AxiosResponse, AxiosError } from 'axios'
+⋮----
+fetchDataWithAxios<Response = unknown, Request = Record<string, unknown>>(
+        param: AxiosRequestConfig<Request>,
+)
+</file>
+
+<file path="src/services/AuthService.ts">
+import ApiService from './ApiService'
+⋮----
+import type {
+    SignUpCredential,
+    ForgotPassword,
+    ResetPassword,
+    SignUpResponse,
+} from '@/@types/auth'
+⋮----
+export async function apiSignUp(data: SignUpCredential)
+⋮----
+export async function apiForgotPassword<T>(data: ForgotPassword)
+⋮----
+export async function apiResetPassword<T>(data: ResetPassword)
+</file>
+
+<file path="src/services/AuthServiceResult.ts">
+import { ResultAsync } from 'neverthrow'
+import ApiService from './ApiService'
+import { wrapPromise, type AuthError } from '@/utils/result-utils'
+⋮----
+import type {
+    SignUpCredential,
+    SignUpResponse,
+} from '@/@types/auth'
+⋮----
+/**
+ * Sign up a new user with neverthrow error handling
+ * @param data User signup credentials
+ * @returns ResultAsync with either SignUpResponse or AuthError
+ */
+export function apiSignUpResult(
+    data: SignUpCredential
+): ResultAsync<SignUpResponse, AuthError>
+</file>
+
+<file path="src/services/axios/AxiosBase.ts">
+import axios from 'axios'
+import AxiosResponseIntrceptorErrorCallback from './AxiosResponseIntrceptorErrorCallback'
+import AxiosRequestIntrceptorConfigCallback from './AxiosRequestIntrceptorConfigCallback'
+import appConfig from '@/configs/app.config'
+import type { AxiosError } from 'axios'
+</file>
+
+<file path="src/services/axios/AxiosRequestIntrceptorConfigCallback.ts">
+import type { InternalAxiosRequestConfig } from 'axios'
+⋮----
+const AxiosRequestIntrceptorConfigCallback = (
+    config: InternalAxiosRequestConfig,
+) =>
+⋮----
+/** handle config mutatation here before request to server */
+</file>
+
+<file path="src/services/axios/AxiosResponseIntrceptorErrorCallback.ts">
+import type { AxiosError } from 'axios'
+⋮----
+const AxiosResponseIntrceptorErrorCallback = (error: AxiosError) =>
+⋮----
+/** handle response error here */
+</file>
+
+<file path="src/services/CommonService.ts">
+import ApiService from './ApiService'
+⋮----
+export async function apiGetNotificationCount()
+⋮----
+export async function apiGetNotificationList()
+⋮----
+export async function apiGetSearchResult<T>(params:
+</file>
+
+<file path="src/utils/acronym.ts">
+export default function acronym(name = '')
+</file>
+
+<file path="src/utils/adapter.ts">
+import { afterAll, beforeAll, expect, test } from 'vitest'
+⋮----
+import type { Adapter, VerificationToken } from '@auth/core/adapters'
+import { createHash, randomInt, randomUUID } from 'crypto'
+⋮----
+export interface TestOptions {
+    adapter: Adapter
+    fixtures?: {
+        user?: any
+        session?: any
+        account?: any
+        sessionUpdateExpires?: Date
+        verificationTokenExpires?: Date
+    }
+    db: {
+        /** Generates UUID v4 by default. Use it to override how the test suite should generate IDs, like user id. */
+        id?: () => string | undefined
+        /**
+         * Manually disconnect database after all tests have been run,
+         * if your adapter doesn't do it automatically
+         */
+        disconnect?: () => Promise<any>
+        /**
+         * Manually establishes a db connection before all tests,
+         * if your db doesn't do this automatically
+         */
+        connect?: () => Promise<any>
+        /** A simple query function that returns a session directly from the db. */
+        session: (sessionToken: string) => any
+        /** A simple query function that returns a user directly from the db. */
+        user: (id: string) => any
+        /** A simple query function that returns an account directly from the db. */
+        account: (providerAccountId: {
+            provider: string
+            providerAccountId: string
+        }) => any
+        /**
+         * A simple query function that returns an verification token directly from the db,
+         * based on the user identifier and the verification token (hashed).
+         */
+        verificationToken: (params: {
+            identifier: string
+            token: string
+        }) => any
+        /**
+         * A simple query function that returns an authenticator directly from the db.
+         */
+        authenticator?: (credentialID: string) => any
+    }
+    skipTests?: string[]
+    /**
+     * Enables testing of WebAuthn methods.
+     */
+    testWebAuthnMethods?: boolean
+}
+⋮----
+/** Generates UUID v4 by default. Use it to override how the test suite should generate IDs, like user id. */
+⋮----
+/**
+         * Manually disconnect database after all tests have been run,
+         * if your adapter doesn't do it automatically
+         */
+⋮----
+/**
+         * Manually establishes a db connection before all tests,
+         * if your db doesn't do this automatically
+         */
+⋮----
+/** A simple query function that returns a session directly from the db. */
+⋮----
+/** A simple query function that returns a user directly from the db. */
+⋮----
+/** A simple query function that returns an account directly from the db. */
+⋮----
+/**
+         * A simple query function that returns an verification token directly from the db,
+         * based on the user identifier and the verification token (hashed).
+         */
+⋮----
+/**
+         * A simple query function that returns an authenticator directly from the db.
+         */
+⋮----
+/**
+     * Enables testing of WebAuthn methods.
+     */
+⋮----
+/**
+ * A wrapper to run the most basic tests.
+ * Run this at the top of your test file.
+ * You can add additional tests below, if you wish.
+ */
+export async function runBasicTests(options: TestOptions)
+⋮----
+const id = ()
+// Init
+⋮----
+const maybeTest = (
+        method: keyof Adapter,
+        runTest: () => Promise<void> | void,
+        ...args: Parameters<typeof test> extends [any, ...infer U] ? U : never
+)
+⋮----
+// @ts-expect-error This is only used for the TypeORM adapter
+⋮----
+// All adapters must define these methods
+⋮----
+// These are optional for custom adapters, but we require them for the official adapters
+⋮----
+// Should only return if the identifier matches
+⋮----
+// Future methods
+// These methods are not yet invoked in the core, but built-in adapters must implement them
+⋮----
+// Re-populate db with session and account
+⋮----
+// User should not exist after it is deleted
+⋮----
+// Session should not exist after user is deleted
+⋮----
+// Account should not exist after user is deleted
+⋮----
+// Setup
+⋮----
+// Test
+⋮----
+// Setup
+⋮----
+// Test
+⋮----
+// Setup
+⋮----
+// Test
+⋮----
+// Setup
+⋮----
+// Test
+⋮----
+// Setup
+⋮----
+// Test
+⋮----
+// UTILS
+export function hashToken(token: string)
+</file>
+
+<file path="src/utils/applyThemeSchema.ts">
+import type { Mode } from '@/@types/theme'
+import type { Variables } from '@/configs/preset-theme-schema.config'
+⋮----
+type ThemeVariables = Record<Variables, string>
+⋮----
+type ThemeSchemaConfig = Record<string, Record<Mode, ThemeVariables>>
+⋮----
+interface MappedTheme {
+    [key: string]: string
+}
+⋮----
+const applyTheme = (
+    theme: string,
+    mode: 'light' | 'dark',
+    presetThemeSchemaConfig: ThemeSchemaConfig,
+): void =>
+⋮----
+const mapTheme = (variables: ThemeVariables): MappedTheme =>
+</file>
+
+<file path="src/utils/classNames.ts">
+import cn from 'classnames'
+import { twMerge } from 'tailwind-merge'
+⋮----
+export default function classNames(...args: cn.ArgumentArray)
+</file>
+
+<file path="src/utils/fileSizeUnit.ts">
+function fileSizeUnit(bytes: number, si = true, dp = 1)
+</file>
+
+<file path="src/utils/hoc/withHeaderItem.tsx">
+import classNames from 'classnames'
+import type { ComponentType, FC } from 'react'
+⋮----
+export type WithHeaderItemProps = {
+    className?: string
+    hoverable?: boolean
+}
+</file>
+
+<file path="src/utils/hooks/useAppendQueryParams.ts">
+import { useSearchParams, useRouter, usePathname } from 'next/navigation'
+⋮----
+const useAppendQueryParams = () =>
+⋮----
+const onAppendQueryParams = (
+        params: Record<string, string | number | boolean>,
+) =>
+</file>
+
+<file path="src/utils/hooks/useAuthority.ts">
+import { useMemo } from 'react'
+import isEmpty from 'lodash/isEmpty'
+⋮----
+function useAuthority(
+    userAuthority: string[] = [],
+    authority: string[] = [],
+    emptyCheck = false,
+)
+</file>
+
+<file path="src/utils/hooks/useCurrentSession.ts">
+import { useContext } from 'react'
+import SessionContext from '@/components/auth/AuthProvider/SessionContext'
+⋮----
+const useCurrentSession = () =>
+</file>
+
+<file path="src/utils/hooks/useDebounce.ts">
+import debounce from 'lodash/debounce'
+import type { DebounceSettingsLeading } from 'lodash'
+⋮----
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function useDebounce<T extends (...args: any) => any>(
+    func: T,
+    wait: number | undefined,
+    options?: DebounceSettingsLeading,
+)
+</file>
+
+<file path="src/utils/hooks/useInfiniteScroll.ts">
+import { Ref, useEffect, useRef, useState } from 'react'
+⋮----
+type Options = {
+    offset?: string
+    shouldStop?: boolean
+    onLoadMore?: () => Promise<void>
+}
+⋮----
+function useInfiniteScroll(options?: Options)
+⋮----
+const containerRef: Ref<HTMLElement> = (container) =>
+⋮----
+async function handler([
+            { isIntersecting },
+]: IntersectionObserverEntry[])
+</file>
+
+<file path="src/utils/hooks/useInterval .ts">
+import { useEffect, useRef } from 'react'
+⋮----
+const useInterval = (callback: () => void, delay: number | null) =>
+⋮----
+const tick = () =>
+</file>
+
+<file path="src/utils/hooks/useLayout.ts">
+import { createContext, useContext } from 'react'
+import {
+    PageContainerHeader,
+    PageContainerBody,
+    PageContainerFooter,
+} from '@/components/template/PageContainer'
+import type { PageContainerProps } from '@/components/template/PageContainer'
+import { LayoutType } from '@/@types/theme'
+import type { ReactNode } from 'react'
+⋮----
+export type PageContainerReassembleProps = {
+    defaultClass: string
+    pageContainerGutterClass: string
+    pageContainerDefaultClass: string
+    PageContainerHeader: typeof PageContainerHeader
+    PageContainerBody: typeof PageContainerBody
+    PageContainerFooter: typeof PageContainerFooter
+} & PageContainerProps
+⋮----
+export interface LayoutContextProps {
+    type: LayoutType
+    adaptiveCardActive?: boolean
+    pageContainerReassemble?: (props: PageContainerReassembleProps) => ReactNode
+}
+⋮----
+const useLayout = (): LayoutContextProps =>
+</file>
+
+<file path="src/utils/hooks/useLayoutGap.ts">
+import useTheme from '@/utils/hooks/useTheme'
+import {
+    HEADER_HEIGHT,
+    LAYOUT_COLLAPSIBLE_SIDE,
+    LAYOUT_FRAMELESS_SIDE,
+} from '@/constants/theme.constant'
+⋮----
+const useLayoutGap = () =>
+⋮----
+const getTopGapValue = () =>
+</file>
+
+<file path="src/utils/hooks/useMenuActive.ts">
+/* eslint-disable @typescript-eslint/no-explicit-any */
+// eslint-disable  @typescript-eslint/no-explicit-any'use client'
+⋮----
+import { useMemo } from 'react'
+import isPlainObject from 'lodash/isPlainObject'
+import type { NavigationTree } from '@/@types/navigation'
+⋮----
+interface NavInfo extends NavigationTree {
+    parentKey?: string
+}
+⋮----
+const getRouteInfo = (
+    navTree: NavInfo | NavInfo[],
+    key: string,
+): NavInfo | undefined =>
+⋮----
+// eslint-disable-next-line no-prototype-builtins
+⋮----
+const findNestedRoute = (navTree: NavigationTree[], key: string): boolean =>
+⋮----
+const getTopRouteKey = (
+    navTree: NavigationTree[],
+    key: string,
+): NavigationTree =>
+⋮----
+function useMenuActive(navTree: NavigationTree[], key: string)
+</file>
+
+<file path="src/utils/hooks/useNavigation.tsx">
+import { useContext } from 'react'
+import NavigationContext from '@/components/template/Navigation/NavigationContext'
+⋮----
+const useNavigation = () =>
+</file>
+
+<file path="src/utils/hooks/useRandomBgColor.ts">
+import { useCallback } from 'react'
+⋮----
+function useRandomBgColor(): (name: string) => string
+⋮----
+const hashName = (name: string) =>
+</file>
+
+<file path="src/utils/hooks/useResponsive.ts">
+import { useEffect, useState } from 'react'
+import isBrowser from '../isBrowser'
+⋮----
+const breakpointInt = (str = '') =>
+⋮----
+'2xl': breakpointInt(twBreakpoint['2xl']), // 1536
+xl: breakpointInt(twBreakpoint.xl), // 1280
+lg: breakpointInt(twBreakpoint.lg), // 1024
+md: breakpointInt(twBreakpoint.md), // 768
+sm: breakpointInt(twBreakpoint.sm), // 640
+xs: breakpointInt(twBreakpoint.xs), // 576
+⋮----
+const getAllSizes = (comparator = 'smaller') =>
+⋮----
+const getResponsiveState = () =>
+⋮----
+const useResponsive = () =>
+⋮----
+const resizeHandler = () =>
+⋮----
+// eslint-disable-next-line react-hooks/exhaustive-deps
+</file>
+
+<file path="src/utils/hooks/useScrollTop.ts">
+import { useEffect, useState } from 'react'
+⋮----
+function useScrollTop()
+⋮----
+const handleScroll = () =>
+</file>
+
+<file path="src/utils/hooks/useTimeOutMessage.ts">
+import { useEffect, useState } from 'react'
+⋮----
+function useTimeOutMessage(
+    interval = 3000,
+): [string, React.Dispatch<React.SetStateAction<string>>]
+⋮----
+// eslint-disable-next-line react-hooks/exhaustive-deps
+</file>
+
+<file path="src/utils/isBrowser.ts">
+
+</file>
+
+<file path="src/utils/isLastChild.ts">
+export default function isLastChild(arr: Array<unknown>, index: number)
+</file>
+
+<file path="src/utils/paginate.ts">
+// eslint-disable-next-line  @typescript-eslint/no-explicit-any
+const paginate = (array: Array<any>, pageSize: number, pageNumber: number) =>
+</file>
+
+<file path="src/utils/queryRoute.ts">
+import type { Route } from '@/@types/routes'
+import { protectedRoutes, publicRoutes } from '@/configs/routes.config'
+⋮----
+export const matchRoute = (path: string): Route | null =>
+</file>
+
+<file path="src/utils/reoderArray.ts">
+const reoderArray = <T>(list: T[], startIndex: number, endIndex: number) =>
+</file>
+
+<file path="src/utils/reorderDragable.ts">
+import reoderArray from './reoderArray'
+import type { DraggableLocation } from '@hello-pangea/dnd'
+⋮----
+export const reorderDragable = <T extends Record<string, unknown[]>>({
+    quoteMap,
+    source,
+    destination,
+}: {
+    quoteMap: T
+    source: DraggableLocation
+    destination: DraggableLocation
+}) =>
+⋮----
+// moving to same list
+</file>
+
+<file path="src/utils/result-utils.ts">
+import { Result, ResultAsync, err, ok } from 'neverthrow'
+import type { AxiosError } from 'axios'
+⋮----
+/**
+ * Custom error type for auth operations
+ */
+export type AuthError = {
+    code: string
+    message: string
+}
+⋮----
+/**
+ * Type for API error responses
+ */
+interface ApiErrorResponse {
+    message?: string
+    error?: string
+    [key: string]: unknown
+}
+⋮----
+/**
+ * Creates a standardized auth error object
+ */
+export function createAuthError(code: string, message: string): AuthError
+⋮----
+/**
+ * Converts an unknown error to a standardized AuthError
+ */
+export function toAuthError(error: unknown): AuthError
+⋮----
+// Handle Axios errors
+⋮----
+// Handle string errors (common in our codebase)
+⋮----
+// Handle Error objects
+⋮----
+// Default case
+⋮----
+/**
+ * Type guard for Axios errors
+ */
+function isAxiosError(error: unknown): error is AxiosError
+⋮----
+/**
+ * Wraps a promise in a ResultAsync to handle errors consistently
+ */
+export function wrapPromise<T>(promise: Promise<T>): ResultAsync<T, AuthError>
+</file>
+
+<file path="src/utils/sleep.ts">
+const sleep = (ms: number)
+</file>
+
+<file path="src/utils/sortBy.ts">
+type Primitive = string | number | boolean
+⋮----
+export type Primer = (value: Primitive) => Primitive
+⋮----
+const sortBy = <T extends Record<string, Primitive>>(
+    field: keyof T,
+    reverse: boolean,
+    primer?: (value: Primitive) => Primitive,
+) =>
+</file>
+
+<file path="src/utils/tableQueryValidator.ts">
+import { z } from 'zod'
+</file>
+
+<file path="src/utils/wildCardSearch.ts">
+// eslint-disable-next-line  @typescript-eslint/no-explicit-any
+export default function wildCardSearch(
+    list: Array<Record<string, string | number>>,
+    input: string,
+    specifyKey?: string,
+)
+⋮----
+const searchText = (item: Record<string, string | number>) =>
+</file>
+
+<file path="tailwind.config.ts">
+import type { Config } from "tailwindcss";
+⋮----
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+⋮----
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+</file>
+
+<file path="src/@types/navigation.ts">
+export type HorizontalMenuMeta =
+    | {
+          layout: 'default'
+      }
+    | {
+          layout: 'columns'
+          showColumnTitle?: boolean
+          columns: 1 | 2 | 3 | 4 | 5
+      }
+    | {
+          layout: 'tabs'
+          columns: 1 | 2 | 3 | 4 | 5
+      }
+⋮----
+export interface NavigationTree {
+    key: string
+    path: string
+    isExternalLink?: boolean
+    title: string
+    icon: string
+    type: 'title' | 'collapse' | 'item'
+    authority: string[]
+    subMenu: NavigationTree[]
+    description?: string
+    meta?: {
+        horizontalMenu?: HorizontalMenuMeta
+    }
+}
+</file>
+
+<file path="src/@types/theme.ts">
+export type Direction = 'ltr'
+export type Mode = 'light' | 'dark'
+export type ControlSize = 'lg' | 'md' | 'sm'
+export type LayoutType =
+    | 'blank'
+    | 'collapsibleSide'
+    | 'stackedSide'
+    | 'topBarClassic'
+    | 'framelessSide'
+    | 'contentOverlay'
+⋮----
+export type Theme = {
+    themeSchema: string
+    direction: Direction
+    mode: Mode
+    panelExpand: boolean
+    controlSize: ControlSize
+    layout: {
+        type: LayoutType
+        sideNavCollapse: boolean
+        previousType?: LayoutType | ''
+    }
+}
+</file>
+
+<file path="src/app/(public-pages)/about/page.tsx">
+import React from 'react'
+import NavigationBar from '@/app/(public-pages)/landing/components/NavigationBar'
+import { MODE_DARK, MODE_LIGHT } from '@/constants/theme.constant'
+import { Mode } from '@/@types/theme'
+⋮----
+const toggleMode = () =>
+⋮----
+{/* Increased top padding */}
+⋮----
+{/* Team Member Cards */}
+</file>
+
+<file path="src/app/layout.tsx">
+import { auth } from '@/auth'
+import AuthProvider from '@/components/auth/AuthProvider'
+import ThemeProvider from '@/components/template/Theme/ThemeProvider'
+import pageMetaConfig from '@/configs/page-meta.config'
+import NavigationProvider from '@/components/template/Navigation/NavigationProvider'
+import { getNavigation } from '@/server/actions/navigation/getNavigation'
+import { getTheme } from '@/server/actions/theme'
+import type { ReactNode } from 'react'
+⋮----
+export default async function RootLayout({
+    children,
+}: Readonly<{
+    children: ReactNode
+}>)
+</file>
+
+<file path="src/app/page.tsx">
+import { JSX } from 'react'
+import getServerSession from '@/server/actions/auth/getServerSession'
+import { redirect } from 'next/navigation'
+import appConfig from '@/configs/app.config'
+import Landing from './(public-pages)/landing/components/Landing'
+⋮----
+const Page = async (): Promise<JSX.Element | void> =>
+</file>
+
+<file path="src/components/auth/SignIn/OauthSignIn.tsx">
+import Button from '@/components/ui/Button'
+import Link from 'next/link'
+import { FaHouse, FaFacebook } from "react-icons/fa6"
+⋮----
+type OauthSignInType = 'google' | 'facebook'
+⋮----
+export type OnOauthSignInPayload = {
+    type: OauthSignInType
+    setMessage?: (message: string) => void
+}
+⋮----
+export type OnOauthSignIn = (payload: OnOauthSignInPayload) => void
+⋮----
+type OauthSignInProps = {
+    setMessage?: (message: string) => void
+    onOauthSignIn?: OnOauthSignIn
+}
+⋮----
+const OauthSignIn = (
+⋮----
+const handleGoogleSignIn = async () =>
+⋮----
+const handleFacebookSignIn = async () =>
+⋮----
+{/* Wrap OAuth buttons in their own div */}
+⋮----
+{/* Home button for larger screens */}
+⋮----
+{/* Home button for smaller screens */}
+</file>
+
+<file path="src/components/auth/SignIn/SignInForm.tsx">
+import { useState } from 'react'
+import Input from '@/components/ui/Input'
+import Button from '@/components/ui/Button'
+import { FormItem, Form } from '@/components/ui/Form'
+import PasswordInput from '@/components/shared/PasswordInput'
+import classNames from '@/utils/classNames'
+⋮----
+import { useForm, Controller } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { z } from 'zod'
+import type { ZodType } from 'zod'
+import type { CommonProps } from '@/@types/common'
+import type { ReactNode } from 'react'
+⋮----
+export type OnSignInPayload = {
+    values: SignInFormSchema
+    setSubmitting: (isSubmitting: boolean) => void
+    setMessage: (message: string) => void
+}
+⋮----
+export type OnSignIn = (payload: OnSignInPayload) => void
+⋮----
+interface SignInFormProps extends CommonProps {
+    passwordHint?: string | ReactNode
+    setMessage: (message: string) => void
+    onSignIn?: OnSignIn
+}
+⋮----
+type SignInFormSchema = {
+    email: string
+    password: string
+}
+⋮----
+const handleSignIn = async (values: SignInFormSchema) =>
+⋮----
+<Form onSubmit=
+</file>
+
+<file path="src/configs/routes.config/authRoute.ts">
+import type { Routes } from '@/@types/routes'
+</file>
+
+<file path="src/configs/routes.config/routes.config.ts">
+import { ADMIN, USER } from '@/constants/roles.constant'
+import authRoute from './authRoute'
+import type { Routes } from '@/@types/routes'
+</file>
+
+<file path="src/constants/app.constant.ts">
+
+</file>
+
+<file path="src/constants/theme.constant.ts">
+
+</file>
+
+<file path="src/middleware.ts">
+import NextAuth from 'next-auth'
+⋮----
+import authConfig from '@/configs/auth.config'
+import {
+    authRoutes as _authRoutes,
+    publicRoutes as _publicRoutes,
+} from '@/configs/routes.config'
+import { REDIRECT_URL_KEY } from '@/constants/app.constant'
+import appConfig from '@/configs/app.config'
+⋮----
+/** Skip auth middleware for api routes */
+⋮----
+/** Redirect to authenticated entry path if signed in & path is auth route */
+⋮----
+/** Redirect to authenticated entry path if signed in & path is public route */
+⋮----
+/** Uncomment this and `import { protectedRoutes } from '@/configs/routes.config'` if you want to enable role based access */
+// if (isSignedIn && nextUrl.pathname !== '/access-denied') {
+//     const routeMeta = protectedRoutes[nextUrl.pathname]
+//     const includedRole = routeMeta?.authority.some((role) => req.auth?.user?.authority.includes(role))
+//     if (!includedRole) {
+//         return Response.redirect(
+//             new URL('/access-denied', nextUrl),
+//         )
+//     }
+// }
+⋮----
+/*
+         * Match all request paths except:
+         * 1. /api routes
+         * 2. /_next (Next.js internals)
+         * 3. /img, /fonts, /videos (static files directories)
+         * 4. All files with extensions (e.g. favicon.ico)
+         */
+</file>
+
+<file path="src/utils/hooks/useTheme.ts">
+import { useContext } from 'react'
+import ThemeContext from '@/components/template/Theme/ThemeContext'
+import { MODE_DARK, MODE_LIGHT } from '@/constants/theme.constant'
+import presetThemeSchemaConfig from '@/configs/preset-theme-schema.config'
+import applyTheme from '@/utils/applyThemeSchema'
+import type { Mode, Direction, LayoutType, Theme } from '@/@types/theme'
+⋮----
+type UseThemeReturnType = {
+    setSchema: (schema: string) => void
+    setMode: (mode: Mode) => void
+    setSideNavCollapse: (sideNavCollapse: boolean) => void
+    setDirection: (direction: Direction) => void
+    setPanelExpand: (panelExpand: boolean) => void
+    setLayout: (layout: LayoutType) => void
+} & Theme
+⋮----
+const useTheme = <T>(selector: (state: UseThemeReturnType) => T): T =>
+⋮----
+const getThemeState = () => (
+⋮----
+// RTL support removed, always use LTR
+</file>
+
+<file path="tsconfig.json">
+{
+    "compilerOptions": {
+        "lib": ["dom", "dom.iterable", "esnext"],
+        "allowJs": true,
+        "skipLibCheck": true,
+        "strict": true,
+        "noEmit": true,
+        "esModuleInterop": true,
+        "module": "esnext",
+        "moduleResolution": "bundler",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "jsx": "preserve",
+        "incremental": true,
+        "plugins": [
+            {
+                "name": "next"
+            }
+        ],
+        "paths": {
+            "@/*": ["./src/*"]
+        },
+        "target": "ES2017"
+    },
+    "include": ["src/@types", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+    "exclude": ["node_modules"]
+}
+</file>
+
+<file path="src/app/(auth-pages)/sign-up/_components/SignUpClient.tsx">
+import { useState } from 'react'
+import SignUp from '@/components/auth/SignUp'
+import type { OnSignUpPayload } from '@/components/auth/SignUp'
+import { Button } from '@/components/ui'
+import { HiArrowLeft, HiCheckCircle, HiExclamationCircle } from 'react-icons/hi'
+import { useRouter } from 'next/navigation'
+import { apiSignUpResult } from '@/services/AuthServiceResult'
+import { createAuthError } from '@/utils/result-utils'
+⋮----
+const handleSignUp = async ({
+        values,
+        setSubmitting,
+        setMessage,
+}: OnSignUpPayload) =>
+⋮----
+// Using neverthrow's Result type for error handling
+⋮----
+// Match on the result - either success or failure
+⋮----
+// Success case handler
+⋮----
+// 🍓 Debug log for successful sign-up
+⋮----
+// Error case handler
+⋮----
+// 🍎 Debug log for error
+</file>
+
+<file path="src/app/(public-pages)/landing/components/OtherFeatures.tsx">
+import Container from './LandingContainer'
+import { TbCircleCheck } from 'react-icons/tb'
+import { motion } from 'framer-motion'
+import type { ReactNode } from 'react'
+⋮----
+const PointList = (
+</file>
+
+<file path="src/configs/app.config.ts">
+export type AppConfig = {
+    apiPrefix: string
+    authenticatedEntryPath: string
+    unAuthenticatedEntryPath: string
+}
+</file>
+
+<file path="README.md">
+# Ecme - The Ultimate Next.js & TypeScript Admin Dashboard Template
+
+Ecme is a modern and responsive admin dashboard template built with Next.js and TypeScript. Designed to provide a highly customizable and easy-to-use platform for building admin interfaces, it includes a variety of reusable components, pre-designed pages, and dynamic features.
+
+This template is perfect for developing dashboards, web applications, CRM systems, e-commerce backends, and more. Whether you're building a small-scale admin panel or a large-scale enterprise application, Ecme is designed to be flexible and scalable.
+
+## Key Features:
+
+- **Next.js Framework**: Built with the powerful Next.js framework, offering server-side rendering (SSR) out of the box.
+- **Responsive Layout**: Optimized for all screen sizes and devices.
+- **Dark/Light Mode**: Easily switch between light and dark themes.
+- **Configurable Themes**: Personalize colors, layouts, and more to fit your needs.
+- **Built with TypeScript**: Ensures robust type-checking and fast development.
+- **Supabase & NextAuth Authentication**: Secure authentication system powered by Supabase and NextAuth.js, supporting Google and Facebook sign-in.
+- **Modern UI**: Clean and intuitive user interface with consistent design language.
+- **Tailwind Component-Based Architecture**: Reusable components to streamline your development process.
+- **Six Pre-designed Layouts**: Multiple layout options with switching capability.
+- **Email Verification**: Integrates Brevo (@getbrevo/brevo) for signup email confirmation.
+- **Role-based Access Control**: Comprehensive permission system for different user types.
+</file>
+
+<file path="package.json">
+{
+  "name": "ecme-next",
+  "version": "1.1.1",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_OPTIONS='--experimental-vm-modules --disable-warning=ExperimentalWarning' explorer http://localhost:3000 & next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "prettier": "npx prettier src --check",
+    "prettier:fix": "npm run prettier -- --write"
+  },
+  "dependencies": {
+    "@auth/core": "^0.39.1",
+    "@auth/supabase-adapter": "^1.9.1",
+    "@floating-ui/react": "^0.27.8",
+    "@fontsource/inter": "^5.2.5",
+    "@fullcalendar/core": "^6.1.17",
+    "@fullcalendar/daygrid": "^6.1.17",
+    "@fullcalendar/interaction": "^6.1.17",
+    "@fullcalendar/react": "^6.1.17",
+    "@fullcalendar/timegrid": "^6.1.17",
+    "@getbrevo/brevo": "^2.2.0",
+    "@hello-pangea/dnd": "^18.0.1",
+    "@hookform/resolvers": "^5.0.1",
+    "@supabase/ssr": "^0.6.1",
+    "@supabase/supabase-js": "^2.49.4",
+    "@tanstack/match-sorter-utils": "^8.19.4",
+    "@tanstack/react-table": "^8.21.3",
+    "@tanstack/react-virtual": "^3.13.8",
+    "@tiptap/pm": "^2.12.0",
+    "@tiptap/react": "^2.12.0",
+    "@tiptap/starter-kit": "^2.12.0",
+    "@visx/pattern": "3.13.0-alpha.0",
+    "axios": "^1.9.0",
+    "classnames": "^2.5.1",
+    "d3-dsv": "^3.0.1",
+    "d3-fetch": "^3.0.1",
+    "d3-scale": "^4.0.2",
+    "dayjs": "^1.11.13",
+    "framer-motion": "12.11.4",
+    "gantt-task-react": "^0.3.9",
+    "html-react-parser": "^5.2.5",
+    "lodash": "^4.17.21",
+    "marked": "^15.0.11",
+    "neverthrow": "^8.2.0",
+    "next": "15.3.2",
+    "next-auth": "5.0.0-beta.28",
+    "react": "19.1.0",
+    "react-apexcharts": "^1.7.0",
+    "react-csv": "^2.2.2",
+    "react-dom": "19.1.0",
+    "react-highlight-words": "^0.21.0",
+    "react-hook-form": "^7.56.3",
+    "react-icons": "^5.5.0",
+    "react-markdown": "^10.1.0",
+    "react-modal": "^3.16.3",
+    "react-number-format": "^5.4.4",
+    "react-scroll": "^1.9.3",
+    "react-select": "^5.10.1",
+    "react-simple-maps": "4.0.0-beta.6",
+    "react-syntax-highlighter": "^15.6.1",
+    "react-tooltip": "^5.28.1",
+    "simplebar-react": "^3.3.1",
+    "swr": "^2.3.3",
+    "tailwind-merge": "^3.3.0",
+    "yet-another-react-lightbox": "^3.23.1",
+    "zod": "^3.24.4",
+    "zustand": "^5.0.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.7",
+    "@tailwindcss/typography": "^0.5.16",
+    "@types/d3-fetch": "^3.0.7",
+    "@types/d3-scale": "^4.0.9",
+    "@types/js-cookie": "^3.0.6",
+    "@types/lodash": "^4.17.16",
+    "@types/node": "^22.15.18",
+    "@types/react": "19.1.4",
+    "@types/react-csv": "^1.1.10",
+    "@types/react-dom": "19.1.5",
+    "@types/react-highlight-words": "^0.20.0",
+    "@types/react-modal": "^3.16.3",
+    "@types/react-portal": "^4.0.7",
+    "@types/react-scroll": "^1.8.10",
+    "@types/react-simple-maps": "^3.0.6",
+    "@types/react-syntax-highlighter": "^15.5.13",
+    "@typescript-eslint/eslint-plugin": "^8.32.1",
+    "@typescript-eslint/parser": "^8.32.1",
+    "autoprefixer": "^10.4.21",
+    "color": "^5.0.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^9.26.0",
+    "eslint-config-next": "15.3.2",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-import-resolver-typescript": "^4.3.4",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "postcss": "^8.5.3",
+    "postcss-nesting": "^13.0.1",
+    "prettier": "^3.5.3",
+    "supabase": "^2.23.4",
+    "tailwindcss": "^4.1.7",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.4"
+  },
+  "overrides": {
+    "@types/react": "19.1.4",
+    "@types/react-dom": "19.1.5",
+    "gantt-task-react": {
+      "react": "19.1.0",
+      "react-dom": "19.1.0"
+    },
+    "react-simple-maps": {
+      "react": "19.0.0",
+      "react-dom": "19.0.0"
+    },
+    "react-syntax-highlighter": {
+      "prismjs": "1.30.0"
+    }
+  },
+  "packageManager": "pnpm@10.11.0"
+}
+</file>
+
+</files>

@@ -1,0 +1,43 @@
+{
+  "mcpServers": {
+    "github.com/supabase-community/supabase-mcp": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@supabase/mcp-server-supabase@latest",
+        "--project-ref=mwtpkxrcjpahrgwfhxbw"
+      ],
+      "env": {
+        "SUPABASE_ACCESS_TOKEN": "sbp_40ebdab1ca24507639c51355c7905acd7a2e40f3"
+      },
+      "alwaysAllow": [
+        "execute_sql",
+        "list_tables"
+      ]
+    },
+    "github.com/modelcontextprotocol/servers/tree/main/src/filesystem": {
+      "autoApprove": [
+        "list_directory",
+        "read_file"
+      ],
+      "timeout": 60,
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "@modelcontextprotocol/server-filesystem",
+        "C:\\Users\\Mak\\Projects\\nodejs"
+      ],
+      "alwaysAllow": [
+        "write_file",
+        "edit_file",
+        "read_file",
+        "move_file",
+        "create_directory"
+      ]
+    }
+  }
+}
+
+

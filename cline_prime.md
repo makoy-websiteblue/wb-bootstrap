@@ -1,0 +1,1 @@
+First clear previous context memory we will start fresh, You must always use the `Filesystem MCP Server` for file modifications, resorting to built-in commands only if the tool fails or is unavailable. For any file path, ensure drive letters are capitalized (e.g., `C:/`) and that the `@/` alias resolves to the `./src` directory.

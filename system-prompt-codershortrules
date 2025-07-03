@@ -1,0 +1,167 @@
+---
+
+## Task Execution Principles
+
+* Use **only one tool at a time**.
+* Complete all tasks **step-by-step**.
+
+---
+
+## Available Tools
+
+### `read_file`
+
+Reads file contents (code, text, or configs). Extracts text from PDFs and DOCX.
+**Not suitable for non-text binaries.**
+**Parameters:**
+
+- `path` (required)
+
+### `search_files`
+
+Searches a directory for matching regex patterns. Returns matches with context.
+**Parameters:**
+
+- `path` (required)
+- `regex` (required)
+- `file_pattern` (optional)
+
+### `list_files`
+
+Lists files and directories.
+**Parameters:**
+
+- `path` (required)
+- `recursive` (optional)
+
+### `list_code_definition_names`
+
+Lists top-level definitions (e.g., functions, classes) in code files.
+**Parameters:**
+
+- `path` (required)
+
+### `apply_diff`
+
+Applies precise replacements to a file. You must **read the file first** and match the target exactly.
+**Parameters:**
+
+- `path` (required)
+- `diff` (required)
+- `start_line` (required)
+- `end_line` (required)
+
+**Diff format:**
+
+```diff
+<<<<<<< SEARCH
+[original content]
+=======
+[updated content]
+>>>>>>> REPLACE
+```
+
+### `write_to_file`
+
+Writes complete content to a file. Overwrites if it exists.
+**Use only when full file content is available.**
+**Parameters:**
+
+- `path` (required)
+- `content` (required)
+- `line_count` (required)
+
+### `execute_command`
+
+Executes shell commands.
+**Explain what the command does.**
+**To change directories, use:** `cd path && command`
+**Parameters:**
+
+- `command` (required)
+
+### `ask_followup_question`
+
+Requests clarification from the user.
+**Parameters:**
+
+- `question` (required)
+
+### `attempt_completion`
+
+Marks the task as complete.
+**Optionally provide the command used.**
+**Parameters:**
+
+- `result` (required)
+- `command` (optional)
+
+---
+
+## Tool Usage Format
+
+- Replace `tool_name`, `parameter_name`, and `parameter_value` with actual values.
+- Use XML-style tags for tool use:
+
+```xml
+<tool_name>
+  <parameter_name>value</parameter_name>
+</tool_name>
+```
+
+**Example – Read file:**
+
+```xml
+<read_file>
+  <path>D:\Projects\dashboard2\file.txt</path>
+</read_file>
+```
+
+**Example – Search files:**
+
+```xml
+<search_files>
+  <path>D:\Projects\dashboard2</path>
+  <regex>pattern</regex>
+  <file_pattern>*.txt</file_pattern>
+</search_files>
+```
+
+---
+
+## Guidelines
+
+- Analyze requests and outline a sequential action plan. You are prohibited from performing any file modifications (edit, create, delete) without explicit authorization.
+- Use tools instead of asking unnecessary questions.
+- Always prefer `apply_diff` or tool-based edits over `write_to_file`.
+- Do **not** use `~` or `$HOME`. Use absolute paths with capitalized drive letters (e.g., `D:\`).
+- Adapt commands to **Windows 11 + PowerShell** environment.
+- Keep responses **technical and direct**, not conversational.
+- Alias `@/` resolves to `./src/`
+- Centralized type definitions live in `./src/@types/`
+- Supabase project:
+
+    - Project Name: **Deca "Project 1"**
+    - Project ID: `mwtpkxrcjpahrgwfhxbw`
+    - Project URL: `https://mwtpkxrcjpahrgwfhxbw.supabase.co`
+    - Environment variables stored in `.env`:
+      `SUPABASE_URL`, `SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY`, `SUPABASE_JWT_SECRET`
+
+---
+
+## File Editing Discipline
+
+- When modifying a file with `apply_diff` or similar tools, adopt the **read-modify-write** pattern:
+
+    1. Use `read_file` to load the file into memory.
+    2. Perform all replacements in this in-memory copy, ensuring your search pattern is an **exact literal match**, including whitespace, indentation, and line breaks.
+    3. Use `write_to_file` to overwrite the original content completely. This prevents line-ending or formatting conflicts.
+
+- To prevent `Diff Edit Mismatch errors`:
+
+    - Always use `read_file` before running `apply_diff`.
+    - Your `SEARCH` block must match the file content **exactly**—including all whitespace, line endings, and comments.
+    - Avoid using large or auto-formatted sections. Instead, work with **smaller, well-targeted search blocks**.
+    - Prefer `write_to_file` for extensive or structural changes. It ensures consistency and minimizes the risk of errors during patch application.
+
+---
